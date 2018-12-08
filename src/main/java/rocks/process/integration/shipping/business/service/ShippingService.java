@@ -23,8 +23,7 @@ public class ShippingService {
     public ShippingBill processShipping(Long customerId, String orderId, String trackingId, String status) throws Exception {
 
     	Customer customer = customerService.retrieveCustomerById(customerId);
-       System.out.println("dieser customer: " + customer.getCustomerId()+" "+ customer.getBirthdate());
-        ShippingBill shippingBill = new ShippingBill(customer, orderId, trackingId, status);
+         ShippingBill shippingBill = new ShippingBill(customer, orderId, trackingId, status);
 //        Discount discount = calculateDiscount(customerId, amount, numberOfItems);
 //        transaction.setDiscount(discount.getFactor());
 //        Amount discountedAmount = applyDiscount(amount, discount);
