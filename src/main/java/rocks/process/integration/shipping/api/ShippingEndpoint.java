@@ -29,7 +29,7 @@ public class ShippingEndpoint {
         ShippingBill shippingBill = null;
         String trackingId = UUID.randomUUID().toString();
 
-        
+        //wenn auf Lager verfügbar, wird shipping durchgeführt, sonst in queue gesetzt
         try {
             String status = "";
         	if(Integer.parseInt(orderMessage.getStockAmount()) < 0)
